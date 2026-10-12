@@ -1,8 +1,8 @@
 import { Phone, Mail, MapPin, Clock, ArrowUpRight } from "lucide-react";
 import { Label } from "@/components/ui/Label";
 import { Button } from "@/components/ui/button";
-import { company } from "@/content/site";
-import contactVideo from "@/assets/gemini_generated_video_c4507169.mp4";
+import { company, images } from "@/content/site";
+import contactConstruction from "@/assets/contact-construction.png";
 
 const inputCls =
   "min-w-0 w-full rounded-lg border border-transparent bg-card px-4 py-3 text-xs text-foreground outline-none placeholder:text-muted-foreground focus:border-primary focus:ring-1 focus:ring-primary";
@@ -16,16 +16,24 @@ export function Contact() {
   ];
 
   return (
-    <section id="contact" aria-labelledby="contact-heading" className="relative isolate bg-muted py-14 lg:py-16">
+    <section id="contact" aria-labelledby="contact-heading" className="relative isolate overflow-hidden bg-muted py-14 lg:py-16">
+      <img
+        src={images.tower}
+        alt=""
+        aria-hidden="true"
+        loading="lazy"
+        className="pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover opacity-40"
+      />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-muted/80 via-muted/50 to-muted/20" />
       <div className="relative mx-auto grid max-w-6xl items-center gap-8 px-6 md:grid-cols-[0.9fr_1.1fr] lg:grid-cols-[1.25fr_0.9fr_1.85fr] lg:gap-10">
-        <div className="mx-auto w-full md:col-span-2 lg:col-span-1">
-          <video
-            src={contactVideo}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-auto object-contain"
+        <div className="mx-auto w-full max-w-80 md:col-span-2 md:max-w-72 lg:col-span-1 lg:max-w-none">
+          <img
+            src={contactConstruction}
+            alt="Architectural model of a building under construction with tower cranes"
+            loading="lazy"
+            width={1024}
+            height={1024}
+            className="aspect-square w-full object-contain lg:scale-[1.25] lg:origin-right animate-float3d"
           />
         </div>
         <div className="space-y-6 self-center">
