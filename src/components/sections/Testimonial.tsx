@@ -28,7 +28,7 @@ export function Testimonial() {
           </div>
           <p className="mt-5 text-sm text-muted-foreground">"{testimonial.quote}"</p>
           <p className="mt-4 text-sm font-semibold">{testimonial.name}</p>
-          <p className="text-xs text-muted-foreground">{testimonial.role}</p>
+          {testimonial.role && <p className="text-xs text-muted-foreground">{testimonial.role}</p>}
         </div>
       </div>
     </section>

@@ -8,9 +8,9 @@ export function Projects() {
     <section id="projects" className="mx-auto max-w-5xl px-6 py-24">
       <Label center>Our Projects</Label>
       <h2 className="text-center text-4xl font-semibold leading-tight">
-        Built Across Every
+        Multi Family Residential Build
         <br />
-        Construction Sector
+        With Public Sector
       </h2>
       <div className="mt-14 grid gap-10 md:grid-cols-2">
         {projects.map((p) => (

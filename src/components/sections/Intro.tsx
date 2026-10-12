@@ -28,7 +28,7 @@ export function Intro() {
           Our mission is to deliver construction that stands the test of time — across Multi Family, General Commercial and Industrial sectors. We believe every project, regardless of size, deserves the same standard of care: clear communication, skilled execution and a team that is accountable from the first conversation to post-completion support.
         </p>
         <div className="mt-7">
-          <Cta>Read More</Cta>
+          <Cta href="#contact">Want to discuss?</Cta>
         </div>
       </div>
       <div className="flex items-end md:col-span-3">

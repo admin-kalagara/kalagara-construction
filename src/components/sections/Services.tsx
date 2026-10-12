@@ -1,6 +1,6 @@
 import { Building2, Hammer, Ruler } from "lucide-react";
 import { Label } from "@/components/ui/Label";
-import { Cta, RoundArrow } from "@/components/ui/Cta";
+import { RoundArrow } from "@/components/ui/Cta";
 import { services } from "@/content/site";
 
 const icons = [Building2, Hammer, Ruler];
@@ -19,9 +19,9 @@ export function Services() {
           <br />
           Results
         </h2>
-        <div className="mt-7">
-          <Cta>View All Services</Cta>
-        </div>
+        <p className="mt-7 text-xs text-muted-foreground leading-relaxed">
+          From residential to industrial — every build delivered with the same standard of care.
+        </p>
       </div>
       <div className="flex gap-5 overflow-x-auto pb-2 md:col-span-9">
         {services.map((s, i) => {

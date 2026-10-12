@@ -40,7 +40,7 @@ export const reasons = [
 ];
 
 export const projects = [
-  { title: "Multi Family Residential Build", place: "Coming Soon", img: site, tilt: "-rotate-2" },
+  { title: "Public Sector", place: "Coming Soon", img: site, tilt: "-rotate-2" },
   { title: "General Commercial Project", place: "Coming Soon", img: tower, tilt: "rotate-2" },
   { title: "Industrial Facility", place: "Coming Soon", img: tower, tilt: "rotate-1" },
   { title: "Multi Family Development", place: "Coming Soon", img: hero, tilt: "-rotate-1" },
@@ -48,8 +48,8 @@ export const projects = [
 
 export const testimonial = {
   quote: "Kalagara brought professionalism and genuine care to every step of our build. Their transparent pricing and clear communication made the whole process stress-free.",
-  name: "A Satisfied Client",
-  role: "Homeowner",
+  name: "KP, a satisfied client",
+  role: "",
 };
 
 export const crew = [

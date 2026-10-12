@@ -156,3 +156,10 @@
 @utility blueprint { background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px); background-size: 32px 32px; }
 @utility blueprint-dark { background-image: linear-gradient(oklch(1 0 0 / 0.07) 1px, transparent 1px), linear-gradient(90deg, oklch(1 0 0 / 0.07) 1px, transparent 1px); background-size: 32px 32px; }
 html { scroll-behavior: smooth; }
+
+@keyframes float3d {
+  0%   { transform: perspective(900px) rotateY(-6deg) rotateX(3deg) translateY(0px); filter: drop-shadow(0 20px 40px oklch(0 0 0 / 0.25)); }
+  50%  { transform: perspective(900px) rotateY(6deg) rotateX(-3deg) translateY(-14px); filter: drop-shadow(0 36px 56px oklch(0 0 0 / 0.18)); }
+  100% { transform: perspective(900px) rotateY(-6deg) rotateX(3deg) translateY(0px); filter: drop-shadow(0 20px 40px oklch(0 0 0 / 0.25)); }
+}
+@utility animate-float3d { animation: float3d 7s ease-in-out infinite; transform-style: preserve-3d; }

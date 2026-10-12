@@ -33,13 +33,13 @@ export function WhyUs() {
           <div className="rounded-2xl border bg-card">
             <ReasonBody r={reasons[0]!} />
           </div>
-          <div className="rounded-2xl border bg-card">
+          <div className="flex flex-col overflow-hidden rounded-2xl border bg-card md:row-span-2">
             <ReasonBody r={reasons[1]!} />
+            <img src={images.tower} alt="" loading="lazy" className="min-h-0 w-full flex-1 object-cover" />
           </div>
           <div className="rounded-2xl border bg-card">
             <ReasonBody r={reasons[3]!} />
           </div>
-          <img src={images.tower} alt="" loading="lazy" className="h-full min-h-40 w-full rounded-2xl object-cover" />
         </div>
       </div>
     </section>
