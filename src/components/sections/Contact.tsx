@@ -1,11 +1,65 @@
 import { Phone, Mail, MapPin, Clock, ArrowUpRight } from "lucide-react";
+import { useRef, useEffect } from "react";
 import { Label } from "@/components/ui/Label";
 import { Button } from "@/components/ui/button";
 import { company, images } from "@/content/site";
-import contactConstruction from "@/assets/contact-construction.png";
+import contactVideo from "@/assets/contact-video.mp4";
 
 const inputCls =
   "min-w-0 w-full rounded-lg border border-transparent bg-card px-4 py-3 text-xs text-foreground outline-none placeholder:text-muted-foreground focus:border-primary focus:ring-1 focus:ring-primary";
+
+function VideoChromaKey({ src, className }: { src: string; className?: string }) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    const canvas = canvasRef.current;
+    if (!video || !canvas) return;
+    const ctx = canvas.getContext("2d", { willReadFrequently: true });
+    if (!ctx) return;
+    let rafId: number;
+
+    const draw = () => {
+      if (video.videoWidth > 0) {
+        if (canvas.width !== video.videoWidth) {
+          canvas.width = video.videoWidth;
+          canvas.height = video.videoHeight;
+        }
+        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+        const frame = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        const d = frame.data;
+        for (let i = 0; i < d.length; i += 4) {
+          if (d[i] > 200 && d[i + 1] > 200 && d[i + 2] > 200) d[i + 3] = 0;
+        }
+        ctx.putImageData(frame, 0, 0);
+      }
+      rafId = requestAnimationFrame(draw);
+    };
+
+    rafId = requestAnimationFrame(draw);
+    return () => cancelAnimationFrame(rafId);
+  }, []);
+
+  return (
+    <div className="relative">
+      <video
+        ref={videoRef}
+        src={src}
+        autoPlay
+        loop
+        muted
+        playsInline
+        style={{ position: "absolute", width: 0, height: 0, overflow: "hidden" }}
+      />
+      <canvas
+        ref={canvasRef}
+        className={className}
+        style={{ maskImage: "radial-gradient(ellipse 85% 85% at 50% 50%, black 50%, transparent 90%)" }}
+      />
+    </div>
+  );
+}
 
 export function Contact() {
   const info = [
@@ -27,13 +81,9 @@ export function Contact() {
       <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-muted/80 via-muted/50 to-muted/20" />
       <div className="relative mx-auto grid max-w-6xl items-center gap-8 px-6 md:grid-cols-[0.9fr_1.1fr] lg:grid-cols-[1.25fr_0.9fr_1.85fr] lg:gap-10">
         <div className="mx-auto w-full max-w-80 md:col-span-2 md:max-w-72 lg:col-span-1 lg:max-w-none">
-          <img
-            src={contactConstruction}
-            alt="Architectural model of a building under construction with tower cranes"
-            loading="lazy"
-            width={1024}
-            height={1024}
-            className="aspect-square w-full object-contain lg:scale-[1.25] lg:origin-right animate-float3d"
+          <VideoChromaKey
+            src={contactVideo}
+            className="w-full object-contain lg:scale-[1.25] lg:origin-right animate-float3d"
           />
         </div>
         <div className="space-y-6 self-center">
