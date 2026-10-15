@@ -9,7 +9,7 @@ import {
   type ErrorComponentProps,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
-import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Facebook, Instagram, Linkedin } from "lucide-react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
@@ -118,9 +118,8 @@ function SocialSidebar() {
     <div className="fixed left-4 top-1/2 z-50 hidden -translate-y-1/2 flex-col gap-3 lg:flex">
       {[
         { Icon: Facebook, href: "https://www.facebook.com/profile.php?id=61572765279791" },
-        { Icon: Twitter, href: "#" },
         { Icon: Instagram, href: "#" },
-        { Icon: Linkedin, href: "#" },
+        { Icon: Linkedin, href: "https://www.linkedin.com/company/145308504/" },
       ].map(({ Icon, href }, i) => (
         <a
           key={i}
