@@ -6,7 +6,7 @@ export function Intro() {
       <div className="relative md:col-span-4">
         <div className="relative z-10 w-52 rounded-2xl border bg-card p-5 shadow-lg">
           <p className="text-2xl font-semibold leading-snug">Who We Are</p>
-          <p className="mt-2 text-sm font-medium">Kalagara Construction</p>
+          <p className="mt-2 text-sm font-medium">Kalagara Builders</p>
           <p className="mt-1 text-xs text-muted-foreground">A dedicated team building Multi Family, Commercial and Industrial spaces with care.</p>
         </div>
         <div className="blueprint mt-[-2rem] h-56 rounded-3xl opacity-70" />

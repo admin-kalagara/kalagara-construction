@@ -5,7 +5,7 @@ export const Route = createFileRoute("/privacy")({
   head: () => ({
     meta: [
       { title: `Privacy Policy — ${company.name}` },
-      { name: "description", content: "Privacy Policy for Kalagara Construction." },
+      { name: "description", content: "Privacy Policy for Kalagara Builders." },
     ],
   }),
   component: PrivacyPage,
@@ -20,7 +20,7 @@ function PrivacyPage() {
         </a>
         <h1 className="text-4xl font-semibold">Privacy Policy</h1>
         <p className="mt-6 text-sm text-muted-foreground leading-relaxed">
-          Kalagara Construction ("Company," "we," "our," or "us") is committed to protecting your privacy. This Privacy Policy describes how
+          Kalagara Builders ("Company," "we," "our," or "us") is committed to protecting your privacy. This Privacy Policy describes how
           we collect, use, disclose, and protect your personal information in connection with our website and related services. By accessing
           or using our site, you acknowledge that you have read and understood this Privacy Policy.
         </p>
