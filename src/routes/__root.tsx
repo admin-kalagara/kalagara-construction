@@ -117,7 +117,7 @@ function SocialSidebar() {
   return (
     <div className="fixed left-4 top-1/2 z-50 hidden -translate-y-1/2 flex-col gap-3 lg:flex">
       {[
-        { Icon: Facebook, href: "#" },
+        { Icon: Facebook, href: "https://www.facebook.com/profile.php?id=61572765279791" },
         { Icon: Twitter, href: "#" },
         { Icon: Instagram, href: "#" },
         { Icon: Linkedin, href: "#" },
