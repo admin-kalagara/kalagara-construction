@@ -118,7 +118,7 @@ function SocialSidebar() {
     <div className="fixed left-4 top-1/2 z-50 hidden -translate-y-1/2 flex-col gap-3 lg:flex">
       {[
         { Icon: Facebook, href: "https://www.facebook.com/profile.php?id=61572765279791" },
-        { Icon: Instagram, href: "#" },
+        { Icon: Instagram, href: "https://www.instagram.com/kalagarabuilders/" },
         { Icon: Linkedin, href: "https://www.linkedin.com/company/145308504/" },
       ].map(({ Icon, href }, i) => (
         <a
