@@ -9,7 +9,7 @@ export function Header() {
     <header className="absolute inset-x-0 top-4 z-30 px-4">
       <div className="mx-auto flex max-w-6xl items-center justify-between rounded-full border border-ink-foreground/20 bg-ink/40 px-4 py-2 backdrop-blur-md">
         <a href="#home" className="flex items-center text-ink-foreground" aria-label="Kalagara home">
-          <img src={company.logo} alt="Kalagara" className="h-10 w-auto rounded-lg bg-white px-2.5 py-1" />
+          <img src={company.logo} alt="Kalagara" className="h-10 w-auto bg-white px-2.5 py-1" />
         </a>
         <nav className="hidden gap-1 md:flex">
           {nav.map((n) => (

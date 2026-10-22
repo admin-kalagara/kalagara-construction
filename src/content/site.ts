@@ -28,8 +28,8 @@ export const nav = [
 
 export const services = [
   { title: "Multi Family", text: "Ground-up multi-family residential builds designed for lasting value and community living.", img: site },
-  { title: "General Commercial", text: "Full-service commercial construction delivering functional, high-quality spaces on time and on budget.", img: tower },
-  { title: "Industrial", text: "Durable, purpose-built industrial facilities engineered to meet demanding operational needs.", img: hero },
+  { title: "General Commercial", text: "Full-service commercial construction delivering functional, high-quality spaces on time and on budget.", img: hero },
+  { title: "Industrial", text: "Durable, purpose-built industrial facilities engineered to meet demanding operational needs.", img: tower },
 ];
 
 export const reasons = [

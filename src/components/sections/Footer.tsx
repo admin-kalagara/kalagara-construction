@@ -12,7 +12,7 @@ export function Footer() {
       <div className="relative overflow-hidden rounded-[2rem] bg-ink px-6 py-14 text-ink-foreground md:px-12">
         <div className="relative z-10 grid gap-10 md:grid-cols-5">
           <div className="md:col-span-2">
-            <img src={company.logo} alt="Kalagara" className="h-12 w-auto rounded-lg bg-white px-3 py-1.5" />
+            <img src={company.logo} alt="Kalagara" className="h-12 w-auto bg-white px-3 py-1.5" />
             <p className="mt-4 max-w-xs text-xs text-ink-foreground/60">
               {company.name} builds lasting spaces with precision, integrity and care.
             </p>
